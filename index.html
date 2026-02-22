@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Day - დღიური სამუშაოები, გადაზიდვა, დელივერი და სწრაფი დასაქმება</title>
+  <meta name="description" content="იპოვე დღიური სამუშაო: კურიერი, მუშა, სამშენებლო ნაგვის გატანა მანქანით, ავეჯის გადაზიდვა, დასუფთავება ან პრომოუტერი. აიღე ანაზღაურება დღესვე. სწრაფი დასაქმება და დამხმარეების გამოძახება!">
+  <meta name="keywords" content="დღიური სამუშაო, დღიური დასაქმება, კურიერი დღიურად, დელივერი, მუშების გამოძახება, ნაგვის გადაყრა, სამშენებლო ნაგვის გატანა მანქანით, ავეჯის გადაზიდვა, ტვირთის ტრანსპორტირება, დამხმარე მუშა, ხელოსანი დღიურად, დასუფთავება, ეზოს მოვლა, პრომოუტერი, დღიური ხელფასი, სწრაფი ფული, pay day georgia, მუშები გამოძახებით, ტვირთის ატანა სართულზე, სამშენებლო მასალების გატანა">
+  <meta property="og:title" content="Pay Day - დასაქმდი და აიღე ანაზღაურება დღესვე!">
+  <meta property="og:description" content="ყველაზე სწრაფი პლატფორმა დღიური სამუშაოების საპოვნელად საქართველოში. გადაზიდვა, ნაგვის გატანა, დელივერი.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .georgian-pattern {
+      background-image: radial-gradient(#d4af37 0.5px, transparent 0.5px);
+      background-size: 10px 10px;
+    }
+    .transition-theme {
+      transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    }
+    /* Custom scrollbar for premium feel */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e2e8f0;
+      border-radius: 10px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+    }
+    .leaflet-container {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.48.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50 text-slate-900 transition-theme">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

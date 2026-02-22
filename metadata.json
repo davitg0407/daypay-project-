@@ -1,0 +1,7 @@
+{
+  "name": "DAYPAY - Georgia's Daily Job Marketplace",
+  "description": "A premium, ultra-modern platform for finding and posting daily jobs in Georgia, featuring AI-powered recommendations and seamless Georgian cultural accents.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
