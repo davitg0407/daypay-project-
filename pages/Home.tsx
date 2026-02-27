@@ -24,10 +24,82 @@ const Home: React.FC<HomeProps> = ({ jobs, onFindWork, onPostJob, onSelectJob, l
   return (
     <div className="space-y-32">
       {/* Hero Section */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-  <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] bg-blue-500/20 blur-[120px] rounded-full animate-pulse" />
-  <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] bg-purple-500/20 blur-[120px] rounded-full animate-pulse delay-700" />
-</div>
+  import React from 'react';
+
+const Home = () => {
+  return (
+    <div style={styles.body}>
+      {/* Aurora ანიმაციის ელემენტები */}
+      <div id="s1" style={{...styles.s1, ...styles.aurora}}></div>
+      <div id="s2" style={{...styles.s2, ...styles.aurora}}></div>
+      <div id="s3" style={{...styles.s3, ...styles.aurora}}></div>
+      <div id="s4" style={{...styles.s4, ...styles.aurora}}></div>
+      <div id="s5" style={{...styles.s5, ...styles.aurora}}></div>
+
+      {/* Glassmorphism კონტეინერი */}
+      <div style={styles.glassContainer}>
+        <div style={styles.glassCard}>
+          <h1 style={styles.h1}>Aurora Animated Background</h1>
+          <p style={styles.p}>With Glassmorphism Effect</p>
+        </div>
+      </div>
+
+      {/* ანიმაციების სტილები (ინექცია) */}
+      <style>{`
+        @keyframes s1 { 0% { background: #FE90A0; } 33% { background: #A0FE90; } 66% { background: #90A0FE; } 100% { background: #FE90A0; } }
+        @keyframes s2 { 0% { background: #F5E2DF; left: 10%; } 33% { background: #DFF5E2; left: 30%; } 66% { background: #E2DFF5; left: 2%; } 100% { background: #F5E2DF; left: 10%; } }
+        @keyframes s3 { 0% { bottom: -60px; } 66% { bottom: -20px; } 100% { bottom: -60px; } }
+        @keyframes s4 { 0% { top: 40%; left: 30%; filter: blur(50px); } 33% { filter: blur(100px); } 66% { top: 50%; left: 20%; filter: blur(70px); } 100% { top: 40%; left: 30%; filter: blur(50px); } }
+        @keyframes s5 { 0% { opacity: 0; } 66% { opacity: 1; } 100% { opacity: 0; } }
+      `}</style>
+    </div>
+  );
+};
+
+const styles: { [key: string]: React.CSSProperties } = {
+  body: {
+    height: '100vh',
+    width: '100vw',
+    overflow: 'hidden',
+    background: '#231f23',
+    margin: 0,
+    padding: 0,
+    fontFamily: "'Poppins', sans-serif",
+    position: 'relative',
+  },
+  aurora: {
+    position: 'absolute',
+  },
+  s1: { width: '300px', height: '300px', left: '-30px', top: 0, background: '#FE90A0', filter: 'blur(200px)', animation: 's1 40s infinite' },
+  s2: { width: '249px', height: '54px', bottom: '36px', left: '10%', background: '#F5E2DF', filter: 'blur(70px)', transform: 'rotate(45deg)', animation: 's2 30s infinite' },
+  s3: { width: '350px', height: '350px', background: 'linear-gradient(55deg, rgba(255,180,200,1), rgba(255,255,0,0) 60%)', borderRadius: '50%', bottom: '-60px', left: '150px', filter: 'blur(30px)', mixBlendMode: 'luminosity', animation: 's3 100s infinite' },
+  s4: { width: '200px', height: '200px', borderRadius: '20%', background: '#231f23', top: '40%', left: '30%', filter: 'blur(50px)', animation: 's4 70s infinite' },
+  s5: { width: '100%', height: '100%', background: 'rgba(230,200,230,.4)', mixBlendMode: 'screen', opacity: 0, animation: 's5 40s infinite' },
+  
+  // გლას ეფექტის სტილები
+  glassContainer: {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    zIndex: 10,
+  },
+  glassCard: {
+    background: 'rgba(255, 255, 255, 0.05)',
+    backdropFilter: 'blur(15px)',
+    WebkitBackdropFilter: 'blur(15px)',
+    borderRadius: '20px',
+    border: '1px solid rgba(255, 255, 255, 0.1)',
+    padding: '40px',
+    textAlign: 'center',
+    boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+  },
+  h1: { color: '#eee', margin: 0, fontSize: '2.5rem' },
+  p: { color: 'rgba(238, 238, 238, 0.7)', marginTop: '10px' }
+};
+
+export default Home;
       <section className="relative overflow-hidden rounded-[4rem] bg-[#020617] py-32 px-10 shadow-3xl">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-amber-600/5 opacity-60" />
         <div className="absolute top-0 right-0 w-1/2 h-full georgian-pattern opacity-10" />
