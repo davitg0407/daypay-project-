@@ -24,6 +24,10 @@ const Home: React.FC<HomeProps> = ({ jobs, onFindWork, onPostJob, onSelectJob, l
   return (
     <div className="space-y-32">
       {/* Hero Section */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+  <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] bg-blue-500/20 blur-[120px] rounded-full animate-pulse" />
+  <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] bg-purple-500/20 blur-[120px] rounded-full animate-pulse delay-700" />
+</div>
       <section className="relative overflow-hidden rounded-[4rem] bg-[#020617] py-32 px-10 shadow-3xl">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-amber-600/5 opacity-60" />
         <div className="absolute top-0 right-0 w-1/2 h-full georgian-pattern opacity-10" />
